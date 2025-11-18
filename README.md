@@ -39,11 +39,11 @@ cd Consumo_Propagandas
 
 Crie e ative um ambiente virtual:
 ```
-    python -m venv venv
+python -m venv venv
 ```
 Windows
 ```
-    venv\Scripts\activate
+venv\Scripts\activate
 ```
 Linux / Mac
 ```
