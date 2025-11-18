@@ -32,28 +32,28 @@ Dependências:
 
 Para rodar esse projeto:
 clone o repositório:
-'''
+```
 git clone <URL_DO_REPOSITORIO>
 cd Consumo_Propagandas
-'''
+```
 
 Crie e ative um ambiente virtual:
-'''
+```
     python -m venv venv
-'''
+```
 Windows
-'''
+```
     venv\Scripts\activate
-'''
+```
 Linux / Mac
-'''
+```
 source venv/bin/activate
-'''
+```
 
 Instale as dependências:
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 Configure um .env com suas credenciais:
 PGUSER=postgres
