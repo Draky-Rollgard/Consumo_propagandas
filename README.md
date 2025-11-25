@@ -56,11 +56,13 @@ pip install -r requirements.txt
 ```
 
 Configure um .env com suas credenciais:
-PGUSER=postgres
-PGPASS=ton
-PGHOST=localhost
-PGPORT=5432
-PGDB=advertising
+```
+PGUSER=""
+PGPASS=""
+PGHOST=""
+PGPORT=""
+PGDB="advertising"
+```
 
 
 Observações importantes
