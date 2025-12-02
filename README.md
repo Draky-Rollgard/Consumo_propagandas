@@ -24,33 +24,45 @@ Criação de DATABASE_URL a partir de variáveis de ambiente.
 requirements.txt: Lista de dependências do projeto.
 
 Dependências:
-SQLAlchemy
-psycopg2-binary
-python-dotenv
-pandas (para manipulação de CSVs e análise de dados)
-(Outras bibliotecas que possam ser adicionadas conforme a necessidade)
+* SQLAlchemy
+* psycopg2-binary
+* python-dotenv
+* pandas (para manipulação de CSVs e análise de dados)
+* (Outras bibliotecas que possam ser adicionadas conforme a necessidade)
 
 Para rodar esse projeto:
 clone o repositório:
+```
 git clone <URL_DO_REPOSITORIO>
 cd Consumo_Propagandas
+```
 
 Crie e ative um ambiente virtual:
-    python -m venv venv
+```
+python -m venv venv
+```
 Windows
-    venv\Scripts\activate
+```
+venv\Scripts\activate
+```
 Linux / Mac
-    source venv/bin/activate
+```
+source venv/bin/activate
+```
 
 Instale as dependências:
+```
 pip install -r requirements.txt
+```
 
 Configure um .env com suas credenciais:
-PGUSER=postgres
-PGPASS=ton
-PGHOST=localhost
-PGPORT=5432
-PGDB=advertising
+```
+PGUSER=""
+PGPASS=""
+PGHOST=""
+PGPORT=""
+PGDB="advertising"
+```
 
 
 Observações importantes
