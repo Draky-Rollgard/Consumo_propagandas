@@ -1,13 +1,3 @@
--- Configuração inicial do postgresql
-\c postgres
-
-CREATE DATABASE consumo_propagandas IF NOT EXISTS;
-
-\c consumo_propagandas
--- insira a senha
-
--- O próprio notebook já faz a inserção da tabelas com os tipos entregues no postgresql--
-
 \d campanhas
 \x
 SELECT * FROM campanhas limit 5;
