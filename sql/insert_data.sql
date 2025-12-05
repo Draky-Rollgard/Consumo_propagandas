@@ -1,3 +1,4 @@
+\c advertising
 \d campanhas
 \x
 SELECT * FROM campanhas limit 5;
