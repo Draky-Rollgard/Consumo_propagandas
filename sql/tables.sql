@@ -68,6 +68,22 @@ CREATE TABLE ACAO_PUBLICITARIA (
 -- CONSULTAS DE ANÁLISE
 select empresa, COUNT(distinct Segmento_Cliente) AS total_segmentos from publicidade group by empresa;
 -- cada empresa tem apenas um segmento
-select Segmento_Cliente, COUNT(distinct empresa) AS total_empresas from publicidade group by Segmento_Cliente;
+select Segmento_Cliente, COUNT(distinct empresa) 
+AS total_empresas from publicidade group by Segmento_Cliente;
 -- um mesmo segmento tem mais de uma empresa (10 empresas para cada), Fashion, Food, Healh, Home, Tecnology
+SELECT idioma, COUNT(DISTINCT cidade)
+FROM publicidade
+GROUP BY idioma;
 
+SELECT cidade, COUNT(DISTINCT idioma)
+FROM publicidade
+GROUP BY cidade;
+
+SELECT *
+FROM pg_constraint
+WHERE confrelid IN (
+    SELECT oid FROM pg_class WHERE relname IN ('campanhas', 'publicidade')
+);
+
+DROP TABLE IF EXISTS campanhas CASCADE;
+DROP TABLE IF EXISTS publicidade CASCADE;
