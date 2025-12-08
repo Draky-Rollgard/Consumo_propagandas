@@ -1,3 +1,12 @@
+--\i C:/Users/Cleitin/BDDM/Consumo_propagandas/sql/insert_data.sql
+
+'''
+ Ordem de execução:
+ 1. insert_data.sql
+ 2. tables.sql
+ 3. insert_tables.sql
+ 4. consult.sql
+'''
 \c advertising
 \d campanhas
 \x
@@ -5,7 +14,8 @@ SELECT * FROM campanhas limit 5;
 SELECT COUNT(*) AS total_registros FROM campanhas;
 
 CREATE TABLE Publicidade (
-    Campanha_ID INTEGER NOT NULL,
+    campanha_ID SERIAL PRIMARY KEY,
+    Campanha_numero INTEGER NOT NULL,
     Campanha_Meta VARCHAR(255) NOT NULL,
     Duracao_Dias SMALLINT NOT NULL,
     Canal VARCHAR(100) NOT NULL,
@@ -26,7 +36,7 @@ CREATE TABLE Publicidade (
 );
 
 INSERT INTO Publicidade (
-    Campanha_ID,
+    Campanha_numero,
     Campanha_Meta,
     Duracao_Dias,
     Canal,
@@ -46,7 +56,7 @@ INSERT INTO Publicidade (
     Idade_Maxima
 )
 SELECT
-    "Campaign_ID" AS Campanha_ID,
+    "Campaign_ID" AS Campanha_numero,
     "Campaign_Goal" AS Campanha_Meta,
     "Duration_in_Days" AS Duracao_Dias,
     "Channel_Used" AS Canal,

@@ -1,3 +1,4 @@
+--\i C:/Users/Cleitin/BDDM/Consumo_propagandas/sql/tables.sql
 CREATE TABLE EMPRESA (
     empresa_id SERIAL PRIMARY KEY,
     nome VARCHAR(150) UNIQUE NOT NULL
@@ -45,14 +46,14 @@ CREATE TABLE PUBLICO (
 -- Preservaçao de demais campos como ação publicitária
 CREATE TABLE ACAO_PUBLICITARIA (
     acao_id SERIAL PRIMARY KEY,
-    campanha_ID INTEGER NOT NULL,
+    campanha_numero INTEGER NOT NULL,
     campanha_meta_id INT NOT NULL REFERENCES CAMPANHA_OBJETIVO(objetivo_id),
     Duracao_Dias SMALLINT NOT NULL,
     Canal_id INT NOT NULL REFERENCES CANAL(canal_id),
     Taxa_Conversao DOUBLE PRECISION NOT NULL,
     Custo_Aquisicao DOUBLE PRECISION NOT NULL,
     ROI DOUBLE PRECISION NOT NULL,
-    socalidade_id INT NOT NULL REFERENCES LOCALIDADE(localidade_id),
+    localidade_id INT NOT NULL REFERENCES LOCALIDADE(localidade_id),
     idioma_id INT NOT NULL REFERENCES IDIOMA(idioma_id),
     Cliques BIGINT NOT NULL,
     Impressoes BIGINT NOT NULL,
